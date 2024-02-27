@@ -1,0 +1,8 @@
+__pycache__/
+.vscode/
+.idea/
+
+gunicorn/access_log_gunicorn.log
+gunicorn/error_log_gunicorn.log
+
+.env

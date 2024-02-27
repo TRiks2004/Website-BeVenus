@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: app-server
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+    networks:
+      - app_network
+    env_file: 
+      - .env
+
+networks:
+  app_network:  
+    external: true
