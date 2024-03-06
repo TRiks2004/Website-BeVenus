@@ -22,4 +22,13 @@ down-app:
 
 down: down-app
 
+kill-app:
+	sudo docker compose -f dockerAppConf.yaml kill
+
+kill: kill-app
+
+
 # ------------------------------------------------------------------
+
+start-gunicorn:
+	gunicorn -c ./gunicorn/gunicorn.conf.py main:app

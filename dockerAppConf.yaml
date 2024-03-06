@@ -9,11 +9,5 @@ services:
       - .:/code
     ports:
       - "${HOST_PORT}:${CONTAINER_PORT}"
-    networks:
-      - app_network
     env_file: 
       - .env
-
-networks:
-  app_network:  
-    external: true
