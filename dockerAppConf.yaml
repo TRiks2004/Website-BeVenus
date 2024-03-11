@@ -1,6 +1,35 @@
 version: '3.9'
 
 services:
+  app_postgres:
+    image: "postgres:14-alpine"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    restart: always
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - ${POSTGRES_VALUES}:/var/lib/postgresql/data
+    networks:
+      - app-web
+
+# ---------------------------------------------------------------------------------------------
+
+  app_pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - ${PGADMIN_PORT}:80
+    networks:
+      - app-web
+
+# ---------------------------------------------------------------------------------------------
+
   app:
     build: .
     container_name: app-server
@@ -9,5 +38,16 @@ services:
       - .:/code
     ports:
       - "${HOST_PORT}:${CONTAINER_PORT}"
-    env_file: 
-      - .env
+    networks:
+      - app-web
+    depends_on:
+      - app_postgres
+      - app_pgadmin
+
+
+networks:
+  app-web:
+    driver: bridge
+
+
+

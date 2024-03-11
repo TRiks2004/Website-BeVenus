@@ -3,6 +3,11 @@ from pydantic_settings import BaseSettings
 
 from os import path
 
+from enum import Enum
+
+class ViewName(Enum):
+    index = 'index'
+
 class SettingsApp(BaseSettings):
     
     @property
@@ -23,8 +28,15 @@ class SettingsApp(BaseSettings):
     def path_folder_view(self) -> str:
         return path.join(self.path_folder_resources, 'views')
     
-    def path_file_view(self, filename: str) -> str:
-        return path.join(self.path_folder_view, filename)
+    def path_file_view(self, filename: ViewName) -> str:
+        return path.join(self.path_folder_view, filename.value + '.html')
 
 settings_app = SettingsApp()
+
+class PathView():
+    index = settings_app.path_file_view(ViewName.index)
+    
+    
+    
+
 
