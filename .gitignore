@@ -5,3 +5,4 @@ __pycache__/
 gunicorn/access_log_gunicorn.log
 gunicorn/error_log_gunicorn.log
 
+docker-vault/
