@@ -529,6 +529,27 @@ testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8-2020", "ini2toml[l
 testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "packaging (>=23.2)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
+name = "sha512-crypt"
+version = "0.1.1"
+description = "Python binding to Rust sha-crypt password hashing crate"
+optional = false
+python-versions = "*"
+files = [
+    {file = "sha512_crypt-0.1.1-cp36-abi3-macosx_10_7_x86_64.whl", hash = "sha256:6fbc200debf7a506243012b5feb088bd643f70e097ea94a6bdf70d9e26ffb6a4"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl", hash = "sha256:971c5f8def6c2034bfbe9626902afc04070f01ffce74a2c2aabf0f59aae97b72"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1488a4f5d777f3501ea4caa4a09271a37d866ab005afdce174f91204cefdf914"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:5a0ce4695e91f63983ec5d0ad21411f6ce507993230636b2a8cd05e5e5edc752"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:e45f7572d023d6d90d7308ecbd88747e341f5a07b0d515e29284aeee8abcf0ce"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:d7d0abe88208fb4cdff1cda59eef4c29376a494b8ff80997c0868ff7d8a90e25"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:ffe1b72e0dc30652bcdb33504afb3a20a20892b7b7243e3aac7e00cce6e36588"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:4faa2744d122e852532dc613f561d234b5737f3df11224d00042fbb597920149"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:5e168eb43a4ac2a07e883cab9c1b339bd0a9467bd0facdef5ddebf5f16c15fae"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-win32.whl", hash = "sha256:ba9084323a240459c395d0e9e2ca9931060a0d07444bd7ab33c5c827b8cf3eaa"},
+    {file = "sha512_crypt-0.1.1-cp36-abi3-win_amd64.whl", hash = "sha256:b27f7db343f8527f22518f367aa476107d5123d46389604add7f293b01793037"},
+    {file = "sha512_crypt-0.1.1.tar.gz", hash = "sha256:d7928cb5c850d9c5145d2b788e2c861df04a19c580f87b7ae5afe690e79df9b0"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.10.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -537,6 +558,17 @@ python-versions = ">=3.8"
 files = [
     {file = "typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475"},
     {file = "typing_extensions-4.10.0.tar.gz", hash = "sha256:b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"},
+]
+
+[[package]]
+name = "uuid6"
+version = "2024.1.12"
+description = "New time-based UUID formats which are suited for use as a database key"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "uuid6-2024.1.12-py3-none-any.whl", hash = "sha256:8150093c8d05a331bc0535bc5ef6cf57ac6eceb2404fd319bc10caee2e02c065"},
+    {file = "uuid6-2024.1.12.tar.gz", hash = "sha256:ed0afb3a973057575f9883201baefe402787ca5e11e1d24e377190f0c43f1993"},
 ]
 
 [[package]]
@@ -613,4 +645,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f75e35079db1075f2e9d455ec7a3f489ba97a2c9750ad6607242cc7462ecc5b0"
+content-hash = "26969ac5554ae968812379bda3b7662a9587f911d25c34afef9660487e885efe"

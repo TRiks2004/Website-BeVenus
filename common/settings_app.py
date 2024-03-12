@@ -7,6 +7,7 @@ from enum import Enum
 
 class ViewName(Enum):
     index = 'index'
+    todo = 'todo'
 
 class SettingsApp(BaseSettings):
     
@@ -35,6 +36,7 @@ settings_app = SettingsApp()
 
 class PathView():
     index = settings_app.path_file_view(ViewName.index)
+    todo = settings_app.path_file_view(ViewName.todo)
     
     
     
